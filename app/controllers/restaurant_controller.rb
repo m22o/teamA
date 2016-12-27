@@ -5,7 +5,10 @@ class RestaurantController < ApplicationController
 
   end
   def index
-     @restaurants = Restaurant.all
+    #  @restaurants = Restaurant.all
+    t = Time.zone.now.to_s(:time)
+    # t = "03:00"
+    @restaurants =Restaurant.where(' ? < end_time',t)
    end
 
 end

@@ -1,6 +1,6 @@
 create_table "restaurants", force: true do |t|
-  t.string   "start"
-  t.string  "end"
+  t.time   "start_time"
+  t.time  "end_time"
   t.string  "name"
   t.string "location"
   t.string "url"
