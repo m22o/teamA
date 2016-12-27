@@ -1,7 +1,7 @@
 class RestaurantController < ApplicationController
   def top
-  times = Time.zone.now
-  @time =  times.strftime("%H:%M")
+    times = Time.zone.now
+    @time =  times.strftime("%H:%M")
 
   end
   def index
@@ -9,10 +9,10 @@ class RestaurantController < ApplicationController
     t = Time.zone.now.to_s(:time)
     # t = "03:00"
     @restaurants =Restaurant.where(' ? < end_time',t)
-   end
+  end
 
-   def show
-     @restaurant = Restaurant.find(params[:id])
-   end
+  def show
+    @restaurant = Restaurant.find(params[:id])
+  end
 
 end
