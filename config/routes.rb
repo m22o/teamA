@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  get 'comments/new'
+  get '/restaurants/new' => 'restaurant#new'
   root 'restaurant#top'
+  post '/restaurants' => 'restaurant#create'
   get '/restaurants' => 'restaurant#index'
-  get '/restaurants/:id' => 'restaurant#show'
+  get '/restaurants/:id' => 'restaurant#show', as: 'restaurant'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

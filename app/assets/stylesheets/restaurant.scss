@@ -1,23 +1,4 @@
-// Place all the styles related to the restaurant controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-h1, h2, h3, h4, h5, h6 {
-
-  line-height: 1;
-}
-li {
-  overflow: auto;
-  padding: 0 0 10px 0;
-  border-top: 1px solid #e8e8e8;
-  border-bottom: 1px solid #eaeaea;
-}
-h1 {
-  margin: 0 auto;
-  font-size: 32px;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-}
-
+/* ボタン================================ */
 .btn {
   padding: 8px 24px;
   color: white;
@@ -29,14 +10,84 @@ h1 {
   cursor: pointer;
 }
 
+/* 「投稿する」「保存」ボタン */
+.primary-btn {
+  width: 250px;
+  background-color: #239b76;
+  float: right;
+}
 .all-btn {
-  text-align: center;
-  margin: 0 auto;
+  width: 250px;
+  background-color: #239b76;
+  float: right;
+}
+
+.primary-btn:hover {
+  background-color: #28b086;
+}
+
+/*　「編集」ボタン　*/
+.edit-btn {
   background-color: #239b76;
 }
 
-.all-btn:hover {
+.edit-btn:hover {
   background-color: #28b086;
   color: white;
   text-decoration: none;
+}
+
+/*　「削除」ボタン　*/
+.destroy-btn {
+  background-color: #1f89e2;
+}
+
+.destroy-btn:hover {
+  background-color: #3695e5;
+  color: white;
+  text-decoration: none;
+}
+
+/* フォーム================================ */
+input, textarea {
+  border: 1px solid #bbb;
+  margin-bottom: 15px;
+  border-radius: 3px;
+}
+
+.form-control {
+  display: block;
+  width: 50%;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.428571429;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+}
+
+.title-field {
+  width: 480px;
+}
+
+.content-field {
+  height: 90px;
+  width: 956px;
+}
+
+/* 投稿一覧================================ */
+.notes {
+  margin: 0;
+}
+
+.notes li {
+  overflow: auto;
+  padding: 0 0 10px 0;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.notes .content {
+  display: block;
 }

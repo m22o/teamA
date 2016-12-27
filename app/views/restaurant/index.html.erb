@@ -4,7 +4,7 @@
     <li>
       <p>店名</p>
       <span class="content">
-        <%=restaurant.name %>
+        <%= link_to restaurant.name, restaurant_path(restaurant.id)%>
       </span>
     </li>
   <% end %>

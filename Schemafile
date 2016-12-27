@@ -4,6 +4,13 @@ create_table "restaurants", force: true do |t|
   t.string  "name"
   t.string "location"
   t.string "url"
-  t.datetime "created_at"
-  t.datetime "updated_at"
+  t.datetime "created_at",  null: false
+  t.datetime "updated_at",  null: false
+end
+create_table "comments", force: true do |t|
+  t.text "comment",        limit: 65535
+  t.integer "star"
+  t.integer "restaurant_id"
+  t.datetime "created_at",  null: false
+  t.datetime "updated_at",  null: false
 end

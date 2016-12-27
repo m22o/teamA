@@ -1,0 +1,16 @@
+<h1>新規投稿する</h1>
+<%= form_tag restaurants_path do %>
+<p>名前</p>
+<input type="text" name="name" class="form-control title-field">
+<p>url</p>
+<input type="text" name="url" class="form-control ">
+<div>
+  start
+  <input type="time" name="start_time">
+  end
+  <input type="time" name="end_time">
+</div>
+<p>場所</p>
+<input type="text" name="location" class="form-control">
+<input type="submit" value="投稿する" class="btn primary-btn">
+<% end %>
