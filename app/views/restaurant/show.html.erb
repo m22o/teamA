@@ -5,7 +5,8 @@
 <p><%= @restaurant.start_time %> ~ <%= @restaurant.end_time %></p>
 <h3>場所</h3>
 <p><%= @restaurant.location%><p>
-<h3>url</h3>
-<p><%= @restaurant.url%><p>
+  <h3>url</h3>
+  <p><%= @restaurant.url%><p>
 
-  <%= link_to "戻る", restaurants_path,class: "btn all-btn" %>
+    <%= link_to "ホーム", restaurants_path,class: "btn all-btn" %>
+    <%= link_to "戻る", :back, class: "btn edit-btn" %>

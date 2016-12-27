@@ -1,0 +1,31 @@
+<h1>投稿を編集する</h1>
+<%= form_tag update_note_path(@restaurant.id), method: 'patch' do %>
+  名前
+  <%= text_field_tag :name, @restaurant.name, class: "form-control title-field" %>
+  url
+  <%= text_area_tag :url, @note.url, class: class: "form-control" %>
+  <div>
+    start
+    <%=time_field_tag type="time" name="start_time"=%>
+    end
+    <%=input type="time" name="end_time"%>
+  </div>
+  <%= submit_tag "保存", class: "btn primary-btn" %>
+<% end %>
+<!-- <h1>新規投稿する</h1>
+<%= form_tag restaurants_path do %>
+<p>名前</p>
+<input type="text" name="name" class="form-control title-field">
+<p>url</p>
+<input type="text" name="url" class="form-control ">
+<div>
+  start
+  <input type="time" name="start_time">
+  end
+  <input type="time" name="end_time">
+</div>
+<p>場所</p>
+<input type="text" name="location" class="form-control">
+<input type="submit" value="投稿する" class="btn primary-btn">
+<% end %> -->
+time_field_tag
