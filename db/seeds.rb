@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Restaurant.create(:start => "19:00",:end => "00:00",:name => "バー山本",:location => "一箕町一丁目三番地",:url => "http://hoghoge.ac.jp")
