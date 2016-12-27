@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>アイーヅの酒場</title>
+</head>
+<body>
+  <table>
+    <% @restaurants.each do |restaurant| %>
+<li>
+  <%=link_to restaurant.name ,{action: 'show',id: restaurant.id},{class: "btn btn-default"}%>
+</li>
+  <% end %>
+</table>
+
+
+</body>
+</html>

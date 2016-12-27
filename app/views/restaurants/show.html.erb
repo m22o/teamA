@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>アイーヅの酒場</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>店名</th>
+      <th><%= @rest.name %></th>
+    </tr>
+    <tr>
+      <th>開店時間</th>
+      <th><%= @rest.start.to_s(:default) %> ~ <%= @rest.end.to_s(:default) %></th>
+    </tr>
+    <tr>
+      <th>場所</th>
+      <th><%= @rest.location %></th>
+    </tr>
+    <tr>
+      <th>URL</th>
+      <th><%= link_to @rest.url , @rest.url %></th>
+    </tr>
+  </table>
+</body>
+</html>

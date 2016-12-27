@@ -1,0 +1,18 @@
+create_table "restaurants", force: true do |t|
+  t.time   "start"
+  t.time  "end"
+  t.string  "name"
+  t.string "location"
+  t.string "url"
+  t.datetime "created_at"
+  t.datetime "updated_at"
+end
+
+create_table "comment", force: true do |t|
+  t.integer   "restaurants_id"
+  t.string  "user_name"
+  t.string "comment"
+  t.integer "star"
+  t.datetime "created_at"
+  t.datetime "updated_at"
+end

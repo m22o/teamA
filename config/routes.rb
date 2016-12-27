@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+
+  root 'index#index'
+
+  resources :restaurants, only: [:index,:show]
+  resources :index
+
+
+
+  #root :to => 'info#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
