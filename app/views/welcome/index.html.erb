@@ -1,0 +1,5 @@
+<h1>welcome.html</h1>
+<div class="wrap">
+	<h1 id="current-time"><%= @time.to_s(:published_on) %></h1>
+	<%= link_to 'Search', {:controller=>'restaurants', :action=>'index'}, :class => "button" %>
+</div>
