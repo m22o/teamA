@@ -1,9 +1,16 @@
 <h1>restaurants.html</h1>
 	<div class="wrap">
 		<h1 id="current-time"><%= @time.to_s(:published_on) %></h1>
-		<%= link_to 'Search', 'http://www.google.co.jp/', :class => "button" %>
+		<%= link_to 'Search', {:controller=>'restaurants',:action=>'restaurantsSearch'}, :class => "button" %>
 	</div>
 	<ul class="shop-list">
+		<% @restaurants.each do |restaurants| %>
+			<li class="shop-button">
+				<%=restaurants.name %>
+			</li>
+		<% end %>
+	</ul>
+	<!-- <ul class="shop-list">
 		<li class="shop-button">
 			天竜
 		</li>
@@ -24,5 +31,5 @@
 		</li>
 		<li class="shop-button">
 			MAGENDO
-		</li>
-	</ul>
+		</li> -->
+	<!-- </ul> -->
