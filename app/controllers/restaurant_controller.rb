@@ -18,8 +18,13 @@ class RestaurantController < ApplicationController
     @restaurant.save
     redirect_to restaurant_path(@restaurant.id)
   end
+
+
+
   def edit
   end
+
+
   def index
     t = Time.zone.now.to_s(:time)
     @restaurants =Restaurant.where(' ? < end_time',t)
@@ -40,13 +45,13 @@ class RestaurantController < ApplicationController
   end
 
   def set_restaurant
-        @restaurant = Restaurant.find(params[:id])
-      end
+    @restaurant = Restaurant.find(params[:id])
+  end
 
-def destroy
-  @restaurant.destroy
-  redirect_to restaurants_path
-end
+  def destroy
+    @restaurant.destroy
+    redirect_to restaurants_path
+  end
 
 
 end
