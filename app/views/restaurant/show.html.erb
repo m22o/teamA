@@ -8,5 +8,6 @@
   <h3>url</h3>
   <p><%= @restaurant.url%><p>
 
-    <%= link_to "ホーム", restaurants_path,class: "btn all-btn" %>
+    <%= link_to "一覧へ", restaurants_path,class: "btn all-btn" %>
     <%= link_to "編集", edit_restaurant_path, class: "btn edit-btn" %>
+    <%= link_to "削除", destroy_restaurant_path,class: "btn destroy-btn", "data-confirm" => "本当に削除しますか？" %>
