@@ -1,3 +1,3 @@
 class Comment < ActiveRecord::Base
-  belong_to :restaurant
+  belongs_to :restaurant
 end

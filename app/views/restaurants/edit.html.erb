@@ -1,0 +1,16 @@
+<h1>投稿を編集する</h1>
+<%= form_for(@restaurant, url: restaurant_path(@restaurant.id), html: {method: "patch"})do |f| %>
+  タイトル
+  <%= f.text_field :name,  class: "form-control title-field" %>
+  <div>
+    start
+   <%= f.time_field :start_time  %>
+   end
+   <%= f.time_field :end_time  %>
+  </div>
+  urll
+  <%= f.text_area :url,  class: "form-control" %>
+  <p>場所</p>
+  <%= f.text_field :location, class: "form-control title-field" %>
+  <%= f.submit "保存", class: "btn primary-btn" %>
+<% end %>
