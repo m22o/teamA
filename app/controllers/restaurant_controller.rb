@@ -1,4 +1,5 @@
 class RestaurantController < ApplicationController
+  before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
   def top
     times = Time.zone.now
     @time =  times.strftime("%H:%M")
@@ -18,21 +19,14 @@ class RestaurantController < ApplicationController
     redirect_to restaurant_path(@restaurant.id)
   end
   def edit
-    @restaurant = Restaurant.find(params[:id])
   end
   def index
-    #  @restaurants = Restaurant.all
     t = Time.zone.now.to_s(:time)
-    # t = "03:00"
     @restaurants =Restaurant.where(' ? < end_time',t)
   end
 
-  def edit
-    @restaurant = Restaurant.find(params[:id])
-  end
 
   def update
-    @restaurant = Restaurant.find(params[:id])
     @restaurant.name = params[:name]
     @restaurant.url = params[:url]
     @restaurant.start_time = params[:start_time]
@@ -41,15 +35,16 @@ class RestaurantController < ApplicationController
     @restaurant.save
     redirect_to restaurant_path(@restaurant.id)
   end
+
   def show
-    @restaurant = Restaurant.find(params[:id])
   end
 
+  def set_restaurant
+        @restaurant = Restaurant.find(params[:id])
+      end
 
 def destroy
-  @restaurant = Restaurant.find(params[:id])
   @restaurant.destroy
-
   redirect_to restaurants_path
 end
 
