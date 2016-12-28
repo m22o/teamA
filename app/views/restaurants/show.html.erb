@@ -21,6 +21,15 @@
       <th>URL</th>
       <th><%= link_to @rest.url , @rest.url %></th>
     </tr>
+    <tr>
+    <th>コメント</th>
+    <th><%= @comment.comment %> (<%= @comment.user_name %>)
+      <% for i in 1..@comment.star do %>
+        ★
+      <% end %>
+    </tr>
+
+
   </table>
 </body>
 </html>
