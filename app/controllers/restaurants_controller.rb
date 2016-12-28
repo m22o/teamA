@@ -28,7 +28,6 @@ class RestaurantsController < ApplicationController
 
 
   def update
-    binding.pry
 
     @restaurant.name = params[:restaurant][:name]
     @restaurant.url = params[:restaurant][:url]
